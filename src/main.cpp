@@ -9,13 +9,16 @@
 
 #include "gl_canvas2d.h"
 #include "DCT/CosineTransformer.h"
+#include "Graph/CosGraph.h"
+
+CosGraph *g;
 
 int screenWidth = 500, screenHeight = 500;
 int mouseX, mouseY;
 
 void render()
 {
-
+   g->draw();
 }
 
 void keyboard(int key)
@@ -37,7 +40,7 @@ void mouse(int button, int state, int wheel, int direction, int x, int y)
 
 int main(void)
 {
-   vector<double> input = {1,2,3,4,5,6,7,8};
+   vector<double> input = {-5,10,30,20,100,0,9,0};
    vector<double> dct = CosineTransformer::DCT(input);
    vector<double> idct = CosineTransformer::IDCT(dct);
 
@@ -55,6 +58,8 @@ int main(void)
       cout << "[" << i << "]";
    }
    puts("");
+
+   g = new CosGraph(dct);
 
 
    CV::init(&screenWidth, &screenHeight, "Titulo da Janela: Canvas 2D - Pressione 1, 2, 3");

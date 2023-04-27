@@ -1,16 +1,16 @@
 # depslib dependency file v1.0
-1626955631 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\gl_canvas2d.cpp
+1681947110 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\gl_canvas2d.cpp
 	"gl_canvas2d.h"
 	<GL/glut.h>
 
-1603974868 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\gl_canvas2d.h
+1681947087 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\gl_canvas2d.h
 	<stdio.h>
 	<stdlib.h>
 	<math.h>
 	<string.h>
 	<GL/glut.h>
 	<GL/freeglut_ext.h>
-	"Vector2.h"
+	"Basic/Vector2.h"
 
 1426372440 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\include\gl\glut.h
 	"freeglut_std.h"
@@ -31,7 +31,7 @@
 
 1682347273 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\vector2.h
 
-1682350874 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\main.cpp
+1682379790 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\main.cpp
 	<GL/glut.h>
 	<GL/freeglut_ext.h>
 	<math.h>
@@ -40,11 +40,36 @@
 	<iostream>
 	"gl_canvas2d.h"
 	"DCT/CosineTransformer.h"
+	"Graph/CosGraph.h"
 
 1682350737 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\dct\cosinetransformer.h
 	<vector>
 	<cmath>
 
-1682350328 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\dct\cosinetransformer.cpp
+1682352823 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\dct\cosinetransformer.cpp
 	"CosineTransformer.h"
+
+1681946755 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\basic\vector2.h
+	<math.h>
+
+1681946731 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\basic\coloredshape.cpp
+	"ColoredShape.h"
+
+1681946740 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\basic\coloredshape.h
+	"Color.h"
+
+1681946726 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\basic\color.h
+	"../gl_canvas2d.h"
+
+1681946747 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\basic\vector2.cpp
+	"Vector2.h"
+
+1682378325 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\cosgraph.h
+	"../gl_canvas2d.h"
+	<vector>
+	<iostream>
+	"../Basic/ColoredShape.h"
+
+1682379432 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\cosgraph.cpp
+	"CosGraph.h"
 
