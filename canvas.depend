@@ -47,7 +47,7 @@
 	<cmath>
 	<algorithm>
 
-1682352823 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\dct\cosinetransformer.cpp
+1682718178 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\dct\cosinetransformer.cpp
 	"CosineTransformer.h"
 
 1681946755 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\basic\vector2.h
@@ -77,7 +77,7 @@
 1682716461 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\graph.cpp
 	"Graph.h"
 
-1682716452 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\graph.h
+1682718259 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\graph.h
 	"../Basic/Vector2.h"
 	<vector>
 

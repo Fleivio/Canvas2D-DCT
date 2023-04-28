@@ -52,12 +52,24 @@ int main(void)
    vector<double> quant = CosineTransformer::QUANT(dct);
    vector<double> dequant = CosineTransformer::DEQUANT(quant);
    vector<double> idct = CosineTransformer::IDCT(dct);
+   vector<double> dif;
 
+   for(unsigned int i = 0; i < input.size(); i++){
+      dif.push_back(input.at(i) - idct.at(i));
+   }
+
+   puts("input:");
    printVec(input);
+   puts("dct:");
    printVec(dct);
+   puts("quantizacao:");
    printVec(quant);
+   puts("desquantizacao:");
    printVec(dequant);
+   puts("idct:");
    printVec(idct);
+   puts("diferenca:");
+   printVec(dif);
 
    g = new Graph(dct);
 
