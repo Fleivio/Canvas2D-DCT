@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1681947110 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\gl_canvas2d.cpp
+1682632909 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\gl_canvas2d.cpp
 	"gl_canvas2d.h"
 	<GL/glut.h>
 
@@ -31,7 +31,7 @@
 
 1682347273 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\vector2.h
 
-1682379790 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\main.cpp
+1682717200 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\main.cpp
 	<GL/glut.h>
 	<GL/freeglut_ext.h>
 	<math.h>
@@ -40,11 +40,12 @@
 	<iostream>
 	"gl_canvas2d.h"
 	"DCT/CosineTransformer.h"
-	"Graph/CosGraph.h"
+	"Graph/Graph.h"
 
-1682350737 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\dct\cosinetransformer.h
+1682717382 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\dct\cosinetransformer.h
 	<vector>
 	<cmath>
+	<algorithm>
 
 1682352823 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\dct\cosinetransformer.cpp
 	"CosineTransformer.h"
@@ -72,4 +73,11 @@
 
 1682379432 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\cosgraph.cpp
 	"CosGraph.h"
+
+1682716461 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\graph.cpp
+	"Graph.h"
+
+1682716452 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\graph.h
+	"../Basic/Vector2.h"
+	<vector>
 

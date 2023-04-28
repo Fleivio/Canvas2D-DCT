@@ -2,14 +2,14 @@
 #define _GRAPH_
 
 #include "../Basic/Vector2.h"
-#include <list>
+#include <vector>
 using namespace std;
 
 class Graph{
     public:
-        list<double> *points;
+        vector<double> *points;
 
-        Graph(list<double> points);
+        Graph(vector<double> points);
         Graph();
 
         void add_point(double point);

@@ -1,11 +1,11 @@
 #include "Graph.h"
 
 Graph::Graph(){
-    points = new list<double>();
+    points = new vector<double>();
 }
 
-Graph::Graph(list<double> points){
-    this->points = new list<double>(points);
+Graph::Graph(vector<double> points){
+    this->points = new vector<double>(points);
 }
 
 void Graph::add_point(double val){
