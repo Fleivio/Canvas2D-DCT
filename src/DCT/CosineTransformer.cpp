@@ -10,7 +10,7 @@ vector<double> CosineTransformer::DCT(const vector<double> input){
         double c = (i == 0) ? sqrt(0.5) : 1;
 
         for(int j = 0; j < m; j++){
-            sum += input.at(j) * cos((2 * j + 1) * i * PI / (2 * m));
+            sum += input.at(j) * cos((2 * j + 1) * i * PI_ / (2 * m));
         }
 
         sum *= c;
@@ -31,7 +31,7 @@ vector<double> CosineTransformer::IDCT(const vector<double> input){
 
         for(int j = 0; j < m; j++){
             double c = (j == 0) ? sqrt(0.5) : 1;
-            sum += input.at(j) * cos((2 * i + 1) * j * PI / (2 * m)) * c;
+            sum += input.at(j) * cos((2 * i + 1) * j * PI_ / (2 * m)) * c;
         }
 
         f.push_back(sum * sqrt(2.0 / m));
@@ -67,3 +67,11 @@ vector<double> CosineTransformer::DEQUANT(const vector<double> input){
     return dequantized;
 }
 
+vector<double> CosineTransformer::DIFF(const vector<double> v1, const vector<double> v2){
+    vector<double> vec;
+
+    for(int i = 0; i < (int) v1.size() && i < (int) v2.size(); i++){
+        vec.push_back(v1.at(i) - v2.at(i));
+    }
+    return vec;
+}

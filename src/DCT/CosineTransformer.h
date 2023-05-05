@@ -6,7 +6,7 @@
 #include <algorithm>
 using namespace std;
 
-#define PI 3.14159265358979323846
+#define PI_ 3.14159265358979323846
 
 class CosineTransformer {
     private:
@@ -23,6 +23,9 @@ class CosineTransformer {
 
         //aplica a desquantização
         static vector<double> DEQUANT(const vector<double> input);
+
+        //calcula a diferenca entre dois vetores
+        static vector<double> DIFF(const vector<double> v1, const vector<double> v2);
 };
 
 #endif

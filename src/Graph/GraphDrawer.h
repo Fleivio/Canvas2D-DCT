@@ -17,6 +17,7 @@ class GraphDrawer
 private:
     static int pointDiv, pointRadius;
     static Color* backgroundColor;
+    static bool showPoints;
 
     static void draw_point(float x, float y);
     static void drawAxis(double offset, double width, double yInc, double max, double min);

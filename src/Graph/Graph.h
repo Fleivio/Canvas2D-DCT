@@ -19,6 +19,9 @@ public:
 
     //construtor recebe label, vértices que delimitam, cor da linha, cor dos pontos, PointSet
     Graph(string name, Vector2 *p1, Vector2 *p2, Color *c1, Color *c2, PointSet *points);
+
+    //construtor recebe label, vértices que delimitam, PointSet
+    Graph(string name, Vector2 *p1, Vector2 *p2, PointSet *points);
 };
 
 #endif
