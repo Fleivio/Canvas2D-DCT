@@ -165,6 +165,20 @@ void CV::text(float x, float y, const char *t)
    }
 }
 
+void CV::small_text(float x, float y, const char *t){
+   int tam = (int)strlen(t);
+   for (int c = 0; c < tam; c++)
+   {
+      glRasterPos2i(x + c * 8, y);
+      glutBitmapCharacter( GLUT_BITMAP_TIMES_ROMAN_10, t[c]);
+   }
+}
+
+void CV::small_text(Vector2 pos, const char *t){
+   CV::small_text(pos.x, pos.y, t);
+}
+
+
 void CV::text(Vector2 pos, const char *t)
 {
    CV::text(pos.x, pos.y, t);

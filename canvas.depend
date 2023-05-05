@@ -1,9 +1,9 @@
 # depslib dependency file v1.0
-1683299200 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\gl_canvas2d.cpp
+1683307554 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\gl_canvas2d.cpp
 	"gl_canvas2d.h"
 	<GL/glut.h>
 
-1681947087 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\gl_canvas2d.h
+1683307351 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\gl_canvas2d.h
 	<stdio.h>
 	<stdlib.h>
 	<math.h>
@@ -31,7 +31,7 @@
 
 1682347273 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\vector2.h
 
-1683299111 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\main.cpp
+1683307107 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\main.cpp
 	<GL/glut.h>
 	<GL/freeglut_ext.h>
 	<math.h>
@@ -80,27 +80,29 @@
 1683299123 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\graph.cpp
 	"Graph.h"
 
-1683299069 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\graph.h
+1683299496 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\graph.h
 	"../Basic/ColoredShape.h"
 	"PointSet.h"
 	"../Basic/Vector2.h"
 	<string>
 
-1683304366 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\pointset.h
+1683299518 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\pointset.h
 	"../Basic/Vector2.h"
 	<vector>
 	<algorithm>
 	<iostream>
 
-1683299144 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\graphdrawer.cpp
+1683307388 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\graphdrawer.cpp
 	"GraphDrawer.h"
 
-1683307651 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\graphdrawer.h
+1683305883 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\graphdrawer.h
 	"Graph.h"
 	"PointSet.h"
 	"../gl_canvas2d.h"
 	<vector>
+	<string>
+	<sstream>
 
-1683307466 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\pointset.cpp
+1683299407 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\pointset.cpp
 	"PointSet.h"
 

@@ -58,6 +58,9 @@ public:
     static void text(float x, float y, const char *t);
     static void text(Vector2 pos, const char *t);
 
+    static void small_text(float x, float y, const char *t);
+    static void small_text(Vector2 pos, const char *t);
+
     // coordenada de offset para desenho de objetos.
     static void translate(float x, float y);
     static void translate(Vector2 pos);

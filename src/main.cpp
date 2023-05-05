@@ -50,7 +50,7 @@ void mouse(int button, int state, int wheel, int direction, int x, int y)
 
 int main(void)
 {
-   vector<double> input = {-5,10,30,20,100,0,9,0, 19, 30, 40 , 5, 8 ,90, 37, 80};
+   vector<double> input = {-500, 100, 200, -100, 0, 400, 1000, 2000, -1500};
    vector<double> dct = CosineTransformer::DCT(input);
    vector<double> quant = CosineTransformer::QUANT(dct);
    vector<double> dequant = CosineTransformer::DEQUANT(quant);

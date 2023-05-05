@@ -1,6 +1,8 @@
 #ifndef _PointSet_
 #define _PointSet_
 
+/*conjunto de pontos*/
+
 #include "../Basic/Vector2.h"
 #include <vector>
 #include <algorithm>
