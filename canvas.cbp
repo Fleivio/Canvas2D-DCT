@@ -51,8 +51,8 @@
 		<Unit filename="src/Basic/Vector2.h" />
 		<Unit filename="src/DCT/CosineTransformer.cpp" />
 		<Unit filename="src/DCT/CosineTransformer.h" />
-		<Unit filename="src/Graph/CosGraph.cpp" />
-		<Unit filename="src/Graph/CosGraph.h" />
+		<Unit filename="src/Graph/Graph.cpp" />
+		<Unit filename="src/Graph/Graph.h" />
 		<Unit filename="src/Vector2.h" />
 		<Unit filename="src/gl_canvas2d.cpp" />
 		<Unit filename="src/gl_canvas2d.h" />

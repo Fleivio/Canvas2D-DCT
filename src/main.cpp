@@ -9,16 +9,25 @@
 
 #include "gl_canvas2d.h"
 #include "DCT/CosineTransformer.h"
+#include "Graph/PointSet.h"
 #include "Graph/Graph.h"
+#include "Basic/Color.h"
+#include "Graph/GraphDrawer.h"
 
-Graph *g;
+Graph *gorig;
+Graph *gdct;
+Graph *gquantiz;
+Graph *gdequant;
+Graph *gidct;
+Graph *gdiff;
 
 int screenWidth = 500, screenHeight = 500;
 int mouseX, mouseY;
 
 void render()
 {
-
+   GraphDrawer::draw(gorig);
+   // GraphDrawer::draw(gdct);
 }
 
 void keyboard(int key)
@@ -38,16 +47,10 @@ void mouse(int button, int state, int wheel, int direction, int x, int y)
 
 }
 
-void printVec(vector<double> v){
-   for(auto i : v){
-      cout << "[" << i << "]";
-   }
-   puts("");
-}
 
 int main(void)
 {
-   vector<double> input = {-5,10,30,20,100,0,9,0};
+   vector<double> input = {-5,10,30,20,100,0,9,0, 19, 30, 40 , 5, 8 ,90, 37, 80};
    vector<double> dct = CosineTransformer::DCT(input);
    vector<double> quant = CosineTransformer::QUANT(dct);
    vector<double> dequant = CosineTransformer::DEQUANT(quant);
@@ -58,20 +61,19 @@ int main(void)
       dif.push_back(input.at(i) - idct.at(i));
    }
 
-   puts("input:");
-   printVec(input);
-   puts("dct:");
-   printVec(dct);
-   puts("quantizacao:");
-   printVec(quant);
-   puts("desquantizacao:");
-   printVec(dequant);
-   puts("idct:");
-   printVec(idct);
-   puts("diferenca:");
-   printVec(dif);
+   PointSet *sInput = new PointSet(input);
+   PointSet *sDct = new PointSet(dct);
+   PointSet *sQuant = new PointSet(quant);
+   PointSet *sDequant = new PointSet(dequant);
+   PointSet *sIdct = new PointSet(idct);
+   PointSet *sDiff = new PointSet(dif);
 
-   g = new Graph(dct);
+   gorig = new Graph("original", new Vector2(20, 30), new Vector2(200, 200), new Color(0,0,0), new Color(1,0,0), sInput);
+   gdct = new Graph("DCT", new Vector2(10, 200), new Vector2(200, 400), new Color(0,0,0), new Color(1,0,0), sDct);
+   // gquantiz =
+   // gdequant =
+   // gidct =
+   // gdiff =
 
    CV::init(&screenWidth, &screenHeight, "Titulo da Janela: Canvas 2D - Pressione 1, 2, 3");
    CV::run();

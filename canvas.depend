@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1682632909 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\gl_canvas2d.cpp
+1683299200 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\gl_canvas2d.cpp
 	"gl_canvas2d.h"
 	<GL/glut.h>
 
@@ -31,7 +31,7 @@
 
 1682347273 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\vector2.h
 
-1682717200 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\main.cpp
+1683299111 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\main.cpp
 	<GL/glut.h>
 	<GL/freeglut_ext.h>
 	<math.h>
@@ -40,9 +40,12 @@
 	<iostream>
 	"gl_canvas2d.h"
 	"DCT/CosineTransformer.h"
+	"Graph/PointSet.h"
 	"Graph/Graph.h"
+	"Basic/Color.h"
+	"Graph/GraphDrawer.h"
 
-1682717382 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\dct\cosinetransformer.h
+1683301711 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\dct\cosinetransformer.h
 	<vector>
 	<cmath>
 	<algorithm>
@@ -74,10 +77,30 @@
 1682379432 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\cosgraph.cpp
 	"CosGraph.h"
 
-1682716461 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\graph.cpp
+1683299123 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\graph.cpp
 	"Graph.h"
 
-1682718259 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\graph.h
+1683299069 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\graph.h
+	"../Basic/ColoredShape.h"
+	"PointSet.h"
+	"../Basic/Vector2.h"
+	<string>
+
+1683304366 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\pointset.h
 	"../Basic/Vector2.h"
 	<vector>
+	<algorithm>
+	<iostream>
+
+1683299144 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\graphdrawer.cpp
+	"GraphDrawer.h"
+
+1683307651 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\graphdrawer.h
+	"Graph.h"
+	"PointSet.h"
+	"../gl_canvas2d.h"
+	<vector>
+
+1683307466 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\pointset.cpp
+	"PointSet.h"
 

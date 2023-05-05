@@ -1,13 +1,10 @@
 #include "Graph.h"
 
-Graph::Graph(){
-    points = new vector<double>();
-}
-
-Graph::Graph(vector<double> points){
-    this->points = new vector<double>(points);
-}
-
-void Graph::add_point(double val){
-    points->push_back(val);
+Graph::Graph(string name, Vector2 *p1, Vector2 *p2, Color *c1, Color *c2, PointSet *points) : ColoredShape(c1){
+    this->p1 = p1;
+    this->p2 = p2;
+    set_border_color(c2);
+    set_border(true);
+    this->points = points;
+    this->name = name;
 }
