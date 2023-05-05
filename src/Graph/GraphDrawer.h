@@ -21,7 +21,7 @@ private:
 
     static void draw_point(float x, float y);
     static void drawAxis(double offset, double width, double yInc, double max, double min);
-    static string toScientificNotation(int value);
+    static string toScientificNotation(double value);
 public:
     //desenha o grafico
     static void draw(Graph *graph);

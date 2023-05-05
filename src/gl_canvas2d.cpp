@@ -169,7 +169,7 @@ void CV::small_text(float x, float y, const char *t){
    int tam = (int)strlen(t);
    for (int c = 0; c < tam; c++)
    {
-      glRasterPos2i(x + c * 8, y);
+      glRasterPos2i(x + c * 5, y);
       glutBitmapCharacter( GLUT_BITMAP_TIMES_ROMAN_10, t[c]);
    }
 }
