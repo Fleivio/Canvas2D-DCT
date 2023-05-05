@@ -7,10 +7,10 @@ GraphManager* DCTController::init_graphs(){
     GraphManager *gm = new GraphManager();
 
     int graphH = 100;
-    int graphW = 200;
-    int graphGap = 30;
+    int graphW = 400;
+    int graphGap = 50;
 
-    vector<double> orig = {-5,10,30,20,100,0,9,0, 19, 30, 40 , 5, 8 ,90, 37, 80};
+    vector<double> orig = CosineTransformer::RAND(550);//{-5,10,30,20,100,0,9,0, 19, 30, 40 , 5, 8 ,90, 37, 80};
     vector<double> dct = CosineTransformer::DCT(orig);
     vector<double> quant = CosineTransformer::QUANT(dct);
     vector<double> dequant = CosineTransformer::DEQUANT(quant);
@@ -18,7 +18,7 @@ GraphManager* DCTController::init_graphs(){
     vector<double> diff = CosineTransformer::DIFF(orig, idct);
 
     //input
-    Graph *Ginput = new Graph("input", new Vector2(graphGap, graphGap), new Vector2(graphGap + graphW, graphGap + graphH),
+    Graph *Ginput = new Graph("Input", new Vector2(graphGap, graphGap), new Vector2(graphGap + graphW, graphGap + graphH),
                              new PointSet(orig));
     Ginput->points->print();
 

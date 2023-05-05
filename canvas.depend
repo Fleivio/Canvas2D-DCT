@@ -47,12 +47,13 @@
 	"Graph/GraphManager.h"
 	"DCTController.h"
 
-1683317251 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\dct\cosinetransformer.h
+1683326009 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\dct\cosinetransformer.h
 	<vector>
 	<cmath>
 	<algorithm>
+	<random>
 
-1683317264 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\dct\cosinetransformer.cpp
+1683327013 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\dct\cosinetransformer.cpp
 	"CosineTransformer.h"
 
 1681946755 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\basic\vector2.h
@@ -79,7 +80,7 @@
 1682379432 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\cosgraph.cpp
 	"CosGraph.h"
 
-1683315409 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\graph.cpp
+1683326120 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\graph.cpp
 	"Graph.h"
 
 1683313519 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\graph.h
@@ -94,7 +95,7 @@
 	<algorithm>
 	<iostream>
 
-1683323579 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\graphdrawer.cpp
+1683326168 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\graphdrawer.cpp
 	"GraphDrawer.h"
 
 1683322941 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\graphdrawer.h
@@ -131,6 +132,6 @@
 1683311921 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\graphmanager.cpp
 	"GraphManager.h"
 
-1683319981 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\dctcontroller.cpp
+1683326998 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\dctcontroller.cpp
 	"DCTController.h"
 

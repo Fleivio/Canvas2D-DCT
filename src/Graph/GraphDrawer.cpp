@@ -79,6 +79,8 @@ void GraphDrawer::draw(Graph *graph)
     CV::color(0);
     CV::rect(0, 0, graphWidth, -graphHeight);
 
+    drawAxis(offsetMult, graphWidth, yIncrement, maxValue, minValue);
+
     int i = 0;
     double y1 = (values->at(i) + yIncrement) * offsetMult;
 
@@ -104,11 +106,8 @@ void GraphDrawer::draw(Graph *graph)
         y1 = y2;
     }
 
-    drawAxis(offsetMult, graphWidth, yIncrement, maxValue, minValue);
-
     CV::color(0, 0, 0);
     CV::text(0, -graphHeight - 5, graph->name.c_str());
-
 
     CV::translate(-graph->p1->x, -graph->p2->y);
 }

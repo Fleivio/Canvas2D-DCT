@@ -4,6 +4,7 @@
 #include <vector>
 #include <cmath>
 #include <algorithm>
+#include <random>
 using namespace std;
 
 #define PI_ 3.14159265358979323846
@@ -26,6 +27,9 @@ class CosineTransformer {
 
         //calcula a diferenca entre dois vetores
         static vector<double> DIFF(const vector<double> v1, const vector<double> v2);
+
+        //retorna um novo vetor com os valores aleatórios
+        static vector<double> RAND(int n);
 };
 
 #endif

@@ -75,3 +75,16 @@ vector<double> CosineTransformer::DIFF(const vector<double> v1, const vector<dou
     }
     return vec;
 }
+
+vector<double> CosineTransformer::RAND(int n){
+    vector<double> result(n);
+    random_device rd;
+    mt19937 gen(rd());
+    uniform_int_distribution<> dis(-128, 127);
+
+    for (int i = 0; i < n; ++i) {
+        result[i] = static_cast<double>(dis(gen));
+    }
+
+    return result;
+}
