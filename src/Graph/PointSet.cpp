@@ -10,6 +10,11 @@ PointSet::PointSet(vector<double> points)
     this->points = new vector<double>(points);
 }
 
+PointSet::~PointSet(){
+    delete points;
+}
+
+
 void PointSet::add_point(double val)
 {
     points->push_back(val);

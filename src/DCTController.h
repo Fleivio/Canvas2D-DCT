@@ -21,6 +21,7 @@ class DCTController{
 
     public:
         static GraphManager* init_graphs();
+
         static void save_output(vector<double> vec);
         static vector<double> load_file();
 };

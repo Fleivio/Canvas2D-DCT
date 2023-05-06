@@ -31,7 +31,7 @@
 
 1682347273 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\vector2.h
 
-1683314554 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\main.cpp
+1683335223 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\main.cpp
 	<GL/glut.h>
 	<GL/freeglut_ext.h>
 	<math.h>
@@ -47,13 +47,13 @@
 	"Graph/GraphManager.h"
 	"DCTController.h"
 
-1683326009 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\dct\cosinetransformer.h
+1683335251 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\dct\cosinetransformer.h
 	<vector>
 	<cmath>
 	<algorithm>
 	<random>
 
-1683327013 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\dct\cosinetransformer.cpp
+1683335197 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\dct\cosinetransformer.cpp
 	"CosineTransformer.h"
 
 1681946755 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\basic\vector2.h
@@ -80,22 +80,22 @@
 1682379432 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\cosgraph.cpp
 	"CosGraph.h"
 
-1683326120 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\graph.cpp
+1683334246 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\graph.cpp
 	"Graph.h"
 
-1683313519 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\graph.h
+1683334216 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\graph.h
 	"../Basic/ColoredShape.h"
 	"PointSet.h"
 	"../Basic/Vector2.h"
 	<string>
 
-1683299518 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\pointset.h
+1683334263 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\pointset.h
 	"../Basic/Vector2.h"
 	<vector>
 	<algorithm>
 	<iostream>
 
-1683326168 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\graphdrawer.cpp
+1683334652 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\graphdrawer.cpp
 	"GraphDrawer.h"
 
 1683322941 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\graphdrawer.h
@@ -106,14 +106,14 @@
 	<string>
 	<sstream>
 
-1683299407 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\pointset.cpp
+1683334283 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\pointset.cpp
 	"PointSet.h"
 
 1683311834 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\graphmanager.h
 	"Graph.h"
 	"GraphDrawer.h"
 
-1683316486 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\dctcontroller.h
+1683334387 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\dctcontroller.h
 	<string>
 	<vector>
 	<iostream>
@@ -132,6 +132,6 @@
 1683311921 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\graph\graphmanager.cpp
 	"GraphManager.h"
 
-1683326998 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\dctcontroller.cpp
+1683334664 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\dctcontroller.cpp
 	"DCTController.h"
 

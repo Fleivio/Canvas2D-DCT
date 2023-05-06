@@ -18,6 +18,8 @@ public:
     PointSet(vector<double> points);
     PointSet();
 
+    ~PointSet();
+
     // adicina um novo ponto ao gráfico
     void add_point(double point);
 

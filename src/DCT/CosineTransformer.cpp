@@ -1,5 +1,7 @@
 #include "CosineTransformer.h"
 
+double CosineTransformer::quantizationFactor = 0.9;
+
 vector<double> CosineTransformer::DCT(const vector<double> input){
     int m = input.size();
     vector<double> F;
@@ -40,30 +42,24 @@ vector<double> CosineTransformer::IDCT(const vector<double> input){
     return f;
 }
 
-int CosineTransformer::nLevels = 8;
+double CosineTransformer::quantizationVector(int i){
+    return 1.0 + ((double)i) * quantizationFactor;
+}
 
 vector<double> CosineTransformer::QUANT(const vector<double> input){
-    double minVal = *min_element(input.begin(), input.end());
-    double maxVal = *max_element(input.begin(), input.end());
-    double step = (maxVal - minVal) / nLevels;
-
-    vector<double> quantized;
-    for(auto val : input){
-        quantized.push_back( floor((val - minVal) / step) );
+    vector<double> quantized(input.size());
+    for(int i = 0; i < (int)input.size(); i++){
+        quantized.at(i) = round(input.at(i) /  quantizationVector(i));
     }
+
     return quantized;
 }
 
 vector<double> CosineTransformer::DEQUANT(const vector<double> input){
     vector<double> dequantized(input.size());
-    double step = 2.0 / (nLevels - 1);
-    double level;
-
     for(int i = 0; i < (int)input.size(); i++){
-        level = input.at(i) * step - 1;
-        dequantized.at(i) = level;
+        dequantized.at(i) = input.at(i) * quantizationVector(i);
     }
-
     return dequantized;
 }
 

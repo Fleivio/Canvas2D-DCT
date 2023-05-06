@@ -17,3 +17,9 @@ Graph::Graph(string name, Vector2 *p1, Vector2 *p2, PointSet *points) : ColoredS
     this->points = points;
     this->name = name;
 }
+
+void Graph::set_points(PointSet* points){
+    delete this->points;
+    this->points = points;
+}
+

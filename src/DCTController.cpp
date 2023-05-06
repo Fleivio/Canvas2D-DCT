@@ -10,11 +10,11 @@ GraphManager* DCTController::init_graphs(){
     int graphW = 400;
     int graphGap = 50;
 
-    vector<double> orig = CosineTransformer::RAND(550);//{-5,10,30,20,100,0,9,0, 19, 30, 40 , 5, 8 ,90, 37, 80};
+    vector<double> orig = CosineTransformer::RAND(150);
     vector<double> dct = CosineTransformer::DCT(orig);
     vector<double> quant = CosineTransformer::QUANT(dct);
     vector<double> dequant = CosineTransformer::DEQUANT(quant);
-    vector<double> idct = CosineTransformer::IDCT(dct);
+    vector<double> idct = CosineTransformer::IDCT(dequant);
     vector<double> diff = CosineTransformer::DIFF(orig, idct);
 
     //input
@@ -82,3 +82,4 @@ vector<double> DCTController::char_to_double(vector<char> cs){
     }
     return ds;
 }
+

@@ -16,7 +16,7 @@
 #include "Graph/GraphManager.h"
 #include "DCTController.h"
 
-int screenWidth = 500, screenHeight = 500;
+int screenWidth = 1000, screenHeight = 500;
 int mouseX, mouseY;
 
 GraphManager *gm;

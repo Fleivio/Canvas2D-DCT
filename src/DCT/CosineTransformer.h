@@ -11,7 +11,9 @@ using namespace std;
 
 class CosineTransformer {
     private:
-        static int nLevels;
+        static double quantizationFactor;
+        static double quantizationVector(int i);
+
     public:
         //retorna o vetor de amplitudes, aplica a DCT
         static vector<double> DCT(const vector<double> input);
