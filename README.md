@@ -6,9 +6,9 @@
 
 - O programa aplica uma quantização nos valores de amplitude, usando a seguinte regra:
 
-´´´
+```
 vetor_de_quantização[i] = 1.0 + (i+1) * quantizationFactor
-´´´
+``` 
 
 - A variável quantization factor pode ser alterada pelo usuário usando um slider na tela. Quando maior for o valor de quantization factor, maiores perdas haverão nos valores, e consequentemente a diferença será bem maior;
 
