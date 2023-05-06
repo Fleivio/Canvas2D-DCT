@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
+#include <ctime>
 
 #include "gl_canvas2d.h"
 #include "DCT/CosineTransformer.h"
@@ -53,9 +54,10 @@ void mouse(int button, int state, int wheel, int direction, int x, int y)
 
 int main(void)
 {
+   
+   srand(time(nullptr));
    controller = new DCTController();
    controller->DCT_from_rand(10);
-
    CV::init(&screenWidth, &screenHeight, "Titulo da Janela: Canvas 2D - Pressione 1, 2, 3");
    CV::run();
 }
