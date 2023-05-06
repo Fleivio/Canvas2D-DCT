@@ -31,21 +31,17 @@
 
 1682347273 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\vector2.h
 
-1683374573 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\main.cpp
+1683379137 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\main.cpp
 	<GL/glut.h>
 	<GL/freeglut_ext.h>
 	<math.h>
 	<stdio.h>
 	<stdlib.h>
 	<iostream>
-	"gl_canvas2d.h"
-	"DCT/CosineTransformer.h"
-	"Graph/PointSet.h"
-	"Graph/Graph.h"
-	"Basic/Color.h"
-	"Graph/GraphDrawer.h"
-	"Graph/GraphManager.h"
-	"DCTController.h"
+	<ctime>
+	"DCT/DCTController.h"
+	"UI/Panel.h"
+	"Input.h"
 
 1683373874 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\dct\cosinetransformer.h
 	<vector>
@@ -53,7 +49,7 @@
 	<algorithm>
 	<random>
 
-1683373850 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\dct\cosinetransformer.cpp
+1683375388 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\dct\cosinetransformer.cpp
 	"CosineTransformer.h"
 
 1681946755 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\basic\vector2.h
@@ -134,4 +130,98 @@
 
 1683374364 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\dctcontroller.cpp
 	"DCTController.h"
+
+1681946827 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\ui\clickable\clickablecircle.cpp
+	"ClickableCircle.h"
+
+1681946831 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\ui\clickable\clickablecircle.h
+	"ClickableField.h"
+	"../../Basic/Vector2.h"
+
+1681946833 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\ui\clickable\clickablefield.h
+	"../../Basic/ColoredShape.h"
+	<functional>
+
+1681946837 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\ui\clickable\clickablerect.cpp
+	"ClickableRect.h"
+
+1681946842 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\ui\clickable\clickablerect.h
+	"./ClickableField.h"
+	"../../Basic/Vector2.h"
+
+1683374364 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\dct\dctcontroller.cpp
+	"DCTController.h"
+
+1683379109 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\dct\dctcontroller.h
+	<string>
+	<vector>
+	<iostream>
+	"../FileManager/FileHandler.h"
+	"../Graph/GraphManager.h"
+	"CosineTransformer.h"
+
+1683378913 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\ui\panel.cpp
+	"Panel.h"
+
+1683379073 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\ui\panel.h
+	"Clickable/ClickableRect.h"
+	"../DCT/DCTController.h"
+
+1683378886 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\input.cpp
+	"Input.h"
+
+1683379123 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\input.h
+	"Basic/Vector2.h"
+	"UI/Panel.h"
+	"FileManager/FileHandler.h"
+	"DCT/DCTController.h"
+	<vector>
+
+1681946927 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\ui\uielements\bar.cpp
+	"Bar.h"
+
+1681946931 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\ui\uielements\bar.h
+	"Button.h"
+
+1681946943 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\ui\uielements\button.h
+	<functional>
+	<list>
+	<string>
+	"../Clickable/ClickableCircle.h"
+	"../Clickable/ClickableRect.h"
+
+1681946936 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\ui\uielements\button.cpp
+	"Button.h"
+
+1681946947 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\ui\uielements\checkbox.cpp
+	"CheckBox.h"
+
+1681946952 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\ui\uielements\checkbox.h
+	"Button.h"
+
+1681946965 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\ui\uielements\slider.cpp
+	"Slider.h"
+
+1681946969 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\ui\uielements\slider.h
+	"../Clickable/ClickableCircle.h"
+	"../Clickable/ClickableRect.h"
+
+1683379214 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\drawer\drawer.cpp
+	"Drawer.h"
+
+1683379199 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\drawer\drawer.h
+	"../gl_canvas2d.h"
+	"../UI/Clickable/ClickableCircle.h"
+	"../UI/Clickable/ClickableRect.h"
+	"../UI/UiElements/Button.h"
+	"../UI/UiElements/CheckBox.h"
+	"../UI/UiElements/Slider.h"
+
+1681946956 source:c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\ui\uielements\checkboxgroup.cpp
+	"CheckBoxGroup.h"
+
+1681946960 c:\users\flavi\desktop\convas 2\gl_1_canvasglut\src\ui\uielements\checkboxgroup.h
+	"CheckBox.h"
+	"../../Drawer/Drawer.h"
+	<list>
 

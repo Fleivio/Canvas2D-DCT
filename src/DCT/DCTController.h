@@ -5,9 +5,9 @@ using namespace std;
 #include <string>
 #include <vector>
 #include <iostream>
-#include "FileManager/FileHandler.h"
-#include "Graph/GraphManager.h"
-#include "DCT/CosineTransformer.h"
+#include "../FileManager/FileHandler.h"
+#include "../Graph/GraphManager.h"
+#include "CosineTransformer.h"
 
 using namespace std;
 
@@ -25,7 +25,7 @@ class DCTController{
     public:
         DCTController();
         ~DCTController();
-        
+
 
         void save_output(vector<double> vec);
         void DCT_from_file();

@@ -8,19 +8,17 @@
 #include <iostream>
 #include <ctime>
 
-#include "gl_canvas2d.h"
-#include "DCT/CosineTransformer.h"
-#include "Graph/PointSet.h"
-#include "Graph/Graph.h"
-#include "Basic/Color.h"
-#include "Graph/GraphDrawer.h"
-#include "Graph/GraphManager.h"
-#include "DCTController.h"
+#include "DCT/DCTController.h"
+
+#include "UI/Panel.h"
+#include "Input.h"
 
 int screenWidth = 1000, screenHeight = 500;
 int mouseX, mouseY;
 
 DCTController *controller;
+Panel *panel;
+Input *input;
 
 void render()
 {
@@ -29,35 +27,33 @@ void render()
 
 void keyboard(int key)
 {
-   
+   input->keyboard_down(key);
 }
 
 void keyboardUp(int key)
 {
-   switch (key)
-   {
-   case 'a':
-      controller->DCT_from_rand(100);
-      break;
-   case 'b':
-      controller->set_quantization_factor(2);
-      break;
-   }
+	input->keyboard_up(key);
 }
 
 void mouse(int button, int state, int wheel, int direction, int x, int y)
 {
-   mouseX = x;
-   mouseY = y;
-}
+	input->att_mouse(button, state, x, y);
 
+	if (wheel != -2)
+	{
+		input->mouse_wheel(direction);
+	}
+}
 
 int main(void)
 {
-   
    srand(time(nullptr));
    controller = new DCTController();
    controller->DCT_from_rand(10);
+
+   panel = new Panel(controller);
+	input = new Input(panel, controller);
+
    CV::init(&screenWidth, &screenHeight, "Titulo da Janela: Canvas 2D - Pressione 1, 2, 3");
    CV::run();
 }
