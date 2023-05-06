@@ -28,6 +28,6 @@ vector<char> FileHandler::load(const string &fileName)
 
         return fileContent;
     }
-    puts("nao abriu o arquivo");
+    
     return vector<char>();
 }

@@ -22,6 +22,7 @@ Input *input;
 
 void render()
 {
+   panel->draw();
    controller->draw();
 }
 

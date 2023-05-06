@@ -3,6 +3,13 @@
 string DCTController::input = "input.dct";
 string DCTController::output = "output.dct";
 
+float DCTController::xSpace = 150;
+float DCTController::ySpace = 0;
+float DCTController::graphH = 100;
+float DCTController::graphW = 300;
+float DCTController::graphGap = 30;
+
+
 DCTController::DCTController(){
     DCT_from_file();
 }
@@ -16,10 +23,6 @@ void DCTController::init_graphs(vector<double> input){
 
     GraphManager *gm = new GraphManager();
 
-    int graphH = 100;
-    int graphW = 400;
-    int graphGap = 50;
-
     vector<double> dct = CosineTransformer::DCT(input);
     vector<double> quant = CosineTransformer::QUANT(dct);
     vector<double> dequant = CosineTransformer::DEQUANT(quant);
@@ -27,34 +30,51 @@ void DCTController::init_graphs(vector<double> input){
     vector<double> diff = CosineTransformer::DIFF(input, idct);
 
     this->original = input;
+    this->compressed = idct;
 
     //input
-    Graph *Ginput = new Graph("Input", new Vector2(graphGap, graphGap), new Vector2(graphGap + graphW, graphGap + graphH),
+    float x1 = graphGap + xSpace, x2 = graphGap + graphW + xSpace;
+    float y1 = graphGap + ySpace, y2 = graphGap + graphH + ySpace;
+    Graph *Ginput = new Graph("Input", new Vector2(x1, y1), new Vector2(x2, y2),
                              new PointSet(input));
     Ginput->points->print();
 
     //DCT
-    Graph *Gdct = new Graph("DCT", new Vector2(graphGap*2 + graphW, graphGap), new Vector2(graphGap*2 + graphW*2, graphGap + graphH),
+    x1 += graphGap + graphW;
+    x2 += graphGap + graphW;
+    Graph *Gdct = new Graph("DCT", new Vector2(x1, y1), new Vector2(x2, y2),
                              new PointSet(dct));
     Gdct->points->print();
 
     //QUANT
-    Graph *Gquant = new Graph("DCT quantizada", new Vector2(graphGap, graphGap*2 + graphH), new Vector2(graphGap + graphW, graphGap*2 + graphH*2),
+    x1 -= graphGap + graphW;
+    x2 -= graphGap + graphW;
+    y1 += graphGap + graphH;
+    y2 += graphGap + graphH;
+    Graph *Gquant = new Graph("DCT quantizada", new Vector2(x1, y1), new Vector2(x2, y2),
                              new PointSet(quant));
     Gquant->points->print();
 
     //DEQUANT
-    Graph *Gdequant = new Graph("DCT desquantizada", new Vector2(graphGap*2 + graphW, graphGap*2 + graphH), new Vector2(graphGap*2 + graphW*2, graphGap*2 + graphH*2),
+    x1 += graphGap + graphW;
+    x2 += graphGap + graphW;
+    Graph *Gdequant = new Graph("DCT desquantizada", new Vector2(x1, y1), new Vector2(x2, y2),
                                  new PointSet(dequant));
     Gdequant->points->print();
 
     //IDCT
-    Graph *Gidct = new Graph("IDCT", new Vector2(graphGap, graphGap*3 + graphH*2), new Vector2(graphGap + graphW, graphGap*3 + graphH*3),
+    x1 -= graphGap + graphW;
+    x2 -= graphGap + graphW;
+    y1 += graphGap + graphH;
+    y2 += graphGap + graphH;
+    Graph *Gidct = new Graph("IDCT", new Vector2(x1, y1), new Vector2(x2, y2),
                              new PointSet(idct));
     Gidct->points->print();
 
     //DIFF
-    Graph *Gdiff = new Graph("Diferenca", new Vector2(graphGap*2 + graphW, graphGap*3 + graphH*2), new Vector2(graphGap*2 + graphW*2, graphGap*3 + graphH*3),
+    x1 += graphGap + graphW;
+    x2 += graphGap + graphW;
+    Graph *Gdiff = new Graph("Diferenca", new Vector2(x1, y1), new Vector2(x2, y2),
                              new PointSet(diff));
     Gdiff->points->print();
 
@@ -68,17 +88,21 @@ void DCTController::init_graphs(vector<double> input){
     this->gm = gm;
 }
 
-void DCTController::DCT_from_file(){
-    init_graphs( char_to_double(FileHandler::load(input)) );
-
-}
 
 void DCTController::DCT_from_rand(int n){
     init_graphs( CosineTransformer::RAND(n) );
 }
 
-void DCTController::save_output(vector<double> vec){
-    FileHandler::save(double_to_char(vec), output);
+void DCTController::DCT_from_file(){
+    vector<char> inp = FileHandler::load(input);
+    if(inp.size() <= 0) return;
+
+    init_graphs( char_to_double(inp) );
+}
+
+void DCTController::save_output(){
+    DCT_from_file();
+    FileHandler::save(double_to_char(compressed), output);
 }
 
 vector<char> DCTController::double_to_char(vector<double> ds){
@@ -106,4 +130,8 @@ void DCTController::set_quantization_factor(double q){
 
 void DCTController::draw(){
     gm->draw();
+}
+
+double DCTController::get_quantization_factor(){
+    return CosineTransformer::get_quantization_factor();
 }

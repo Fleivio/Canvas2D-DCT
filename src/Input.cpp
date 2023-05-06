@@ -94,7 +94,7 @@ void Input::att_moviment_delta()
 
 void Input::keyboard_down(int key)
 {
-    if(key == 'a') controller->DCT_from_rand(10);
+    if(key == 'r') controller->DCT_from_rand(10);
     return;
     // switch (key)
     // {

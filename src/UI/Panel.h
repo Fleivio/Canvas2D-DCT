@@ -3,6 +3,7 @@
 
 #include "Clickable/ClickableRect.h"
 #include "../DCT/DCTController.h"
+#include "DCTButtonBar.h"
 
 class Panel
 {
@@ -10,6 +11,7 @@ private:
     void set_up_field();
     static int width;
     DCTController *controller;
+    DCTButtons *buttons;
 public:
     ClickableRect *field;
 

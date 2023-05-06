@@ -52,6 +52,7 @@ vector<double> CosineTransformer::QUANT(const vector<double> input){
         quantized.at(i) = round(input.at(i) / quantizationVector(i));
     }
 
+    cout << quantizationFactor << "\n";
     return quantized;
 }
 
@@ -73,8 +74,11 @@ vector<double> CosineTransformer::DIFF(const vector<double> v1, const vector<dou
 }
 
 vector<double> CosineTransformer::RAND(int n){
-    vector<double> result(n);
-    generate(result.begin(), result.end(), std::rand);
+    vector<double> result;
+
+    for(int i = 0; i < n; i++){
+        result.push_back(rand() % 255 - 128);
+    }
 
     return result;
 }
@@ -82,3 +86,8 @@ vector<double> CosineTransformer::RAND(int n){
 void CosineTransformer::set_quantization_factor(double q){
     quantizationFactor = q;
 }
+
+double CosineTransformer::get_quantization_factor(){
+    return quantizationFactor;
+}
+

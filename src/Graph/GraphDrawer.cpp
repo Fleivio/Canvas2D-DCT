@@ -109,5 +109,5 @@ void GraphDrawer::draw(Graph *graph)
     CV::color(0, 0, 0);
     CV::text(0, -graphHeight - 5, graph->name.c_str());
 
-    CV::translate(-graph->p1->x, -graph->p2->y);
+    CV::translate(0, 0);
 }

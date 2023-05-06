@@ -5,8 +5,9 @@ retorna o valor sempre em pocentagem*/
 
 #include "../Clickable/ClickableCircle.h"
 #include "../Clickable/ClickableRect.h"
+#include "Button.h"
 
-class Slider
+class Slider : public Button
 {
 private:
     /*raio da bola de seleção*/

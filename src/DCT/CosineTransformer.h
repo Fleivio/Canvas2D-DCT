@@ -5,6 +5,7 @@
 #include <cmath>
 #include <algorithm>
 #include <random>
+#include <iostream>
 using namespace std;
 
 #define PI_ 3.14159265358979323846
@@ -34,6 +35,8 @@ class CosineTransformer {
         static vector<double> RAND(int n);
 
         static void set_quantization_factor(double quantizationFactor);
+        static double get_quantization_factor();
+
 };
 
 #endif
