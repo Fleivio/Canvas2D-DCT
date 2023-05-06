@@ -1,6 +1,6 @@
 #include "Bar.h"
 
-float Bar::defaultGap = 0.1;
+float Bar::defaultGap = 5;
 
 Bar::Bar(float x1, float y1, float x2, float y2) : Button(x1, y1, x2, y2)
 {

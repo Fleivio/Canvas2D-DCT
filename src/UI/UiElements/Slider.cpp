@@ -28,9 +28,6 @@ int Slider::calc_value()
 
 void Slider::on_click(float x, float y)
 {
-    for (auto e : *callback)
-        e();
-    
     actual->v1->x = x;
 }
 

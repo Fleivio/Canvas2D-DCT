@@ -50,7 +50,7 @@ int main(void)
 {
    srand(time(nullptr));
    controller = new DCTController();
-   controller->DCT_from_rand(10);
+   // controller->DCT_from_rand(10);
 
    panel = new Panel(controller);
 	input = new Input(panel, controller);

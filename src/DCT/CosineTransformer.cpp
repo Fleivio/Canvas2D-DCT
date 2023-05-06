@@ -51,8 +51,6 @@ vector<double> CosineTransformer::QUANT(const vector<double> input){
     for(int i = 0; i < (int)input.size(); i++){
         quantized.at(i) = round(input.at(i) / quantizationVector(i));
     }
-
-    cout << quantizationFactor << "\n";
     return quantized;
 }
 
@@ -75,10 +73,12 @@ vector<double> CosineTransformer::DIFF(const vector<double> v1, const vector<dou
 
 vector<double> CosineTransformer::RAND(int n){
     vector<double> result;
-
+    
     for(int i = 0; i < n; i++){
-        result.push_back(rand() % 255 - 128);
+        double n = rand() % 256 - 128;
+        result.push_back(n);
     }
+
 
     return result;
 }

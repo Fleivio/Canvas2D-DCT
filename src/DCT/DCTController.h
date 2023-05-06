@@ -6,8 +6,9 @@ using namespace std;
 #include <vector>
 #include <iostream>
 #include "../FileManager/FileHandler.h"
-#include "../Graph/GraphManager.h"
 #include "CosineTransformer.h"
+#include "../Graph/Graph.h"
+#include "../Graph/GraphDrawer.h"
 
 using namespace std;
 
@@ -25,10 +26,16 @@ class DCTController{
         vector<char> double_to_char(vector<double> ds);
         vector<double> char_to_double(vector<char> cs);
 
-        void init_graphs(vector<double> input);
-        GraphManager* gm;
-        vector<double> original;
-        vector<double> compressed;
+        void att_graphs(vector<double> input);
+        void set_graphs();
+
+        Graph *original;
+        Graph *dct;
+        Graph *quant;
+        Graph *dequant;
+        Graph *idct;
+        Graph *diff;
+
     public:
         DCTController();
         ~DCTController();
