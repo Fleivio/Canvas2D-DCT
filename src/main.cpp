@@ -19,21 +19,29 @@
 int screenWidth = 1000, screenHeight = 500;
 int mouseX, mouseY;
 
-GraphManager *gm;
+DCTController *controller;
 
 void render()
 {
-   gm->draw();
+   controller->draw();
 }
 
 void keyboard(int key)
 {
-
+   
 }
 
 void keyboardUp(int key)
 {
-
+   switch (key)
+   {
+   case 'a':
+      controller->DCT_from_rand(100);
+      break;
+   case 'b':
+      controller->set_quantization_factor(2);
+      break;
+   }
 }
 
 void mouse(int button, int state, int wheel, int direction, int x, int y)
@@ -45,7 +53,8 @@ void mouse(int button, int state, int wheel, int direction, int x, int y)
 
 int main(void)
 {
-   gm = DCTController::init_graphs();
+   controller = new DCTController();
+   controller->DCT_from_rand(10);
 
    CV::init(&screenWidth, &screenHeight, "Titulo da Janela: Canvas 2D - Pressione 1, 2, 3");
    CV::run();

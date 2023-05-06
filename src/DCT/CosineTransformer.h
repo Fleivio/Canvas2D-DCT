@@ -32,6 +32,8 @@ class CosineTransformer {
 
         //retorna um novo vetor com os valores aleatórios
         static vector<double> RAND(int n);
+
+        static void set_quantization_factor(double quantizationFactor);
 };
 
 #endif

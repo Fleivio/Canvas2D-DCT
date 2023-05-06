@@ -1,6 +1,6 @@
 #include "CosineTransformer.h"
 
-double CosineTransformer::quantizationFactor = 0.9;
+double CosineTransformer::quantizationFactor = 0.1;
 
 vector<double> CosineTransformer::DCT(const vector<double> input){
     int m = input.size();
@@ -43,13 +43,13 @@ vector<double> CosineTransformer::IDCT(const vector<double> input){
 }
 
 double CosineTransformer::quantizationVector(int i){
-    return 1.0 + ((double)i) * quantizationFactor;
+    return 1.0 + (i+1) * quantizationFactor;
 }
 
 vector<double> CosineTransformer::QUANT(const vector<double> input){
     vector<double> quantized(input.size());
     for(int i = 0; i < (int)input.size(); i++){
-        quantized.at(i) = round(input.at(i) /  quantizationVector(i));
+        quantized.at(i) = round(input.at(i) / quantizationVector(i));
     }
 
     return quantized;
@@ -83,4 +83,8 @@ vector<double> CosineTransformer::RAND(int n){
     }
 
     return result;
+}
+
+void CosineTransformer::set_quantization_factor(double q){
+    quantizationFactor = q;
 }

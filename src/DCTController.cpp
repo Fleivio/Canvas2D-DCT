@@ -3,23 +3,34 @@
 string DCTController::input = "input.dct";
 string DCTController::output = "output.dct";
 
-GraphManager* DCTController::init_graphs(){
+DCTController::DCTController(){
+    DCT_from_file();
+}
+
+DCTController::~DCTController(){
+    delete this->gm;
+}
+
+void DCTController::init_graphs(vector<double> input){
+    if(this->gm != nullptr) delete this->gm;
+
     GraphManager *gm = new GraphManager();
 
     int graphH = 100;
     int graphW = 400;
     int graphGap = 50;
 
-    vector<double> orig = CosineTransformer::RAND(150);
-    vector<double> dct = CosineTransformer::DCT(orig);
+    vector<double> dct = CosineTransformer::DCT(input);
     vector<double> quant = CosineTransformer::QUANT(dct);
     vector<double> dequant = CosineTransformer::DEQUANT(quant);
     vector<double> idct = CosineTransformer::IDCT(dequant);
-    vector<double> diff = CosineTransformer::DIFF(orig, idct);
+    vector<double> diff = CosineTransformer::DIFF(input, idct);
+
+    this->original = input;
 
     //input
     Graph *Ginput = new Graph("Input", new Vector2(graphGap, graphGap), new Vector2(graphGap + graphW, graphGap + graphH),
-                             new PointSet(orig));
+                             new PointSet(input));
     Ginput->points->print();
 
     //DCT
@@ -54,11 +65,16 @@ GraphManager* DCTController::init_graphs(){
     gm->add_graph(Gidct);
     gm->add_graph(Gdiff);
 
-    return gm;
+    this->gm = gm;
 }
 
-vector<double> DCTController::load_file(){
-    return char_to_double(FileHandler::load(input));
+void DCTController::DCT_from_file(){
+    init_graphs( char_to_double(FileHandler::load(input)) );
+
+}
+
+void DCTController::DCT_from_rand(int n){
+    init_graphs( CosineTransformer::RAND(n) );
 }
 
 void DCTController::save_output(vector<double> vec){
@@ -83,3 +99,11 @@ vector<double> DCTController::char_to_double(vector<char> cs){
     return ds;
 }
 
+void DCTController::set_quantization_factor(double q){
+    CosineTransformer::set_quantization_factor(q);
+    init_graphs(original);
+}
+
+void DCTController::draw(){
+    gm->draw();
+}

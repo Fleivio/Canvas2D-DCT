@@ -16,14 +16,22 @@ class DCTController{
         static string input;
         static string output;
 
-        static vector<char> double_to_char(vector<double> ds);
-        static vector<double> char_to_double(vector<char> cs);
+        vector<char> double_to_char(vector<double> ds);
+        vector<double> char_to_double(vector<char> cs);
 
+        void init_graphs(vector<double> input);
+        GraphManager* gm;
+        vector<double> original;
     public:
-        static GraphManager* init_graphs();
+        DCTController();
+        ~DCTController();
+        
 
-        static void save_output(vector<double> vec);
-        static vector<double> load_file();
+        void save_output(vector<double> vec);
+        void DCT_from_file();
+        void DCT_from_rand(int n);
+        void set_quantization_factor(double q);
+        void draw();
 };
 
 #endif
