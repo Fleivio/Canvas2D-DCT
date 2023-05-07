@@ -25,6 +25,8 @@ vetor_de_quantização[i] = 1.0 + (i+1) * quantizationFactor
 
 - O programa salva o resultado da idct no arquivo output.dct, e por padrão, ao iniciar, lê o arquivo input.dct;
 
+- Além disso, todos os gráficos mostram uma série de linhas paralelas ao eixo X, as quais indicam valores inteiros das magnitudes. Bom para se visualizar em que ordem de grandeza estão os dados;
+
 ### Botões
 
 - O botão "Load" acessa o arquivo input.dct e aplica a dct. O que por padrão é sempre executado no início;
@@ -44,6 +46,8 @@ vetor_de_quantização[i] = 1.0 + (i+1) * quantizationFactor
 ``` 
 
 - O segundo slider controla a quantidade de valores de entrada que serão gerados pelos botões Random e Sine, este slider tem como valor mínimo 32 e máximo 512, como constava na especificação do trabalho;
+
+- A última checkbox "Show Points" controla se os pontos individuais serão desenhados;
 
 ### Disclaimer
 - O programa utiliza muitas classes do trabalho anterior, como Input, Drawer e toda a implementação de UI e Panel;

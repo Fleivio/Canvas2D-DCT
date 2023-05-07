@@ -22,12 +22,14 @@ void DCTController::set_graphs(){
     float y1 = graphGap + ySpace, y2 = graphGap + graphH + ySpace;
     Graph *Ginput = new Graph("Input", new Vector2(x1, y1), new Vector2(x2, y2),
                              new PointSet(zeroV));
+    Ginput->set_border_color(1,0,0);
 
     //DCT
     x1 += graphGap + graphW;
     x2 += graphGap + graphW;
     Graph *Gdct = new Graph("DCT", new Vector2(x1, y1), new Vector2(x2, y2),
                              new PointSet(zeroV));
+    Gdct->set_border_color(0,0,1);
 
     //QUANT
     x1 -= graphGap + graphW;
@@ -36,12 +38,14 @@ void DCTController::set_graphs(){
     y2 += graphGap + graphH;
     Graph *Gquant = new Graph("DCT quantizada", new Vector2(x1, y1), new Vector2(x2, y2),
                              new PointSet(zeroV));
+    Gquant->set_border_color(0,0.5,0);
 
     //DEQUANT
     x1 += graphGap + graphW;
     x2 += graphGap + graphW;
     Graph *Gdequant = new Graph("DCT desquantizada", new Vector2(x1, y1), new Vector2(x2, y2),
                                  new PointSet(zeroV));
+    Gdequant->set_border_color(0.5,0,0.5);
 
     //IDCT
     x1 -= graphGap + graphW;
@@ -50,12 +54,14 @@ void DCTController::set_graphs(){
     y2 += graphGap + graphH;
     Graph *Gidct = new Graph("IDCT", new Vector2(x1, y1), new Vector2(x2, y2),
                              new PointSet(zeroV));
+    Gidct->set_border_color(0,0.5,0.5);
 
     //DIFF
     x1 += graphGap + graphW;
     x2 += graphGap + graphW;
     Graph *Gdiff = new Graph("Diferenca", new Vector2(x1, y1), new Vector2(x2, y2),
                              new PointSet(zeroV));
+    Gdiff->set_border_color(0.6,0,0.2);
 
 
     original = Ginput;

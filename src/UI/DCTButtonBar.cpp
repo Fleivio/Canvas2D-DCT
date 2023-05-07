@@ -16,6 +16,7 @@ void DCTButtons::draw(){
     Drawer::draw(reloadButton);
     Drawer::draw(sinizeButton);
     Drawer::draw(nSlider);
+    Drawer::draw(showPoints);
 }
 
 void DCTButtons::on_click(float x, float y){
@@ -26,6 +27,7 @@ void DCTButtons::on_click(float x, float y){
     else if(randomizeButton->verify_on_click(x,y)) return;
     else if(reloadButton->verify_on_click(x,y)) return;
     else if(sinizeButton->verify_on_click(x,y)) return;
+    else if(showPoints->verify_on_click(x,y)) return;
     else if(quantSlider->field->is_point_inside(x,y)) {
         quantSlider->on_click(x,y);
         ((Button*)quantSlider)->on_click();
@@ -50,7 +52,7 @@ void DCTButtons::on_hold(float x, float y){
 }
 
 void DCTButtons::set_up_childs(float x1, float y1, float x2, float y2){
-    int n = 7;
+    int n = 8;
     float buttonW = x2 - x1;
     float buttonH = (y2 - y1 - (defaultGap * (n+1))) / n;
     float sliderH = 10;
@@ -113,6 +115,19 @@ void DCTButtons::set_up_childs(float x1, float y1, float x2, float y2){
                             y1 + (defaultGap + buttonH) * 6 + sliderH + defaultGap);
     nSlider->field->set_color(1, 1, 0.8);
     nSlider->actual->set_color(1, 0.5, 0.5);
+
+    showPoints = new CheckBox(new ClickableRect(x1 + defaultGap,
+                                   y1 + (defaultGap + buttonH) * 7 + defaultGap,
+                                   x1 - defaultGap + buttonW,
+                                   y1 + (defaultGap + buttonH) * 7 + buttonH + defaultGap), "Show Points");
+    showPoints->set_selected_color(0,1,0);
+    showPoints->set_unselected_color(0.6,0.6,0.6);
+    showPoints->isChecked = false;
+    showPoints->add_callback(
+        [](){
+            GraphDrawer::showPoints = ! GraphDrawer::showPoints;
+        }
+    );
 }
 
 int DCTButtons::get_input_size(){

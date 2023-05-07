@@ -35,8 +35,19 @@ void CheckBox::set_selected_color(Color *color)
     selectedColor = color->copy();
 }
 
+void CheckBox::set_selected_color(float r, float g, float b){
+    delete selectedColor;
+    selectedColor = new Color(r,g,b);
+}
+
+
 void CheckBox::set_unselected_color(Color *color)
 {
     delete unSelectedColor;
     unSelectedColor = color->copy();
+}
+
+void CheckBox::set_unselected_color(float r, float g, float b){
+    delete unSelectedColor;
+    unSelectedColor = new Color(r,g,b);
 }

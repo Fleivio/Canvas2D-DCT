@@ -50,7 +50,7 @@
 	<random>
 	<iostream>
 
-1683416848 source:c:\users\flavi\desktop\convas 2\flaviobt2\src\dct\dctcontroller.cpp
+1683418276 source:c:\users\flavi\desktop\convas 2\flaviobt2\src\dct\dctcontroller.cpp
 	"DCTController.h"
 
 1683411051 c:\users\flavi\desktop\convas 2\flaviobt2\src\dct\dctcontroller.h
@@ -79,7 +79,7 @@
 	<algorithm>
 	<iostream>
 
-1683322941 c:\users\flavi\desktop\convas 2\flaviobt2\src\graph\graphdrawer.h
+1683418856 c:\users\flavi\desktop\convas 2\flaviobt2\src\graph\graphdrawer.h
 	"Graph.h"
 	"PointSet.h"
 	"../gl_canvas2d.h"
@@ -117,7 +117,7 @@
 	"../Clickable/ClickableCircle.h"
 	"../Clickable/ClickableRect.h"
 
-1681946952 c:\users\flavi\desktop\convas 2\flaviobt2\src\ui\uielements\checkbox.h
+1683418700 c:\users\flavi\desktop\convas 2\flaviobt2\src\ui\uielements\checkbox.h
 	"Button.h"
 
 1683389564 c:\users\flavi\desktop\convas 2\flaviobt2\src\ui\uielements\slider.h
@@ -135,7 +135,7 @@
 1683334246 source:c:\users\flavi\desktop\convas 2\flaviobt2\src\graph\graph.cpp
 	"Graph.h"
 
-1683386840 source:c:\users\flavi\desktop\convas 2\flaviobt2\src\graph\graphdrawer.cpp
+1683418850 source:c:\users\flavi\desktop\convas 2\flaviobt2\src\graph\graphdrawer.cpp
 	"GraphDrawer.h"
 
 1683334283 source:c:\users\flavi\desktop\convas 2\flaviobt2\src\graph\pointset.cpp
@@ -156,11 +156,12 @@
 	"../DCT/DCTController.h"
 	"DCTButtonBar.h"
 
-1683413025 c:\users\flavi\desktop\convas 2\flaviobt2\src\ui\dctbuttonbar.h
+1683418459 c:\users\flavi\desktop\convas 2\flaviobt2\src\ui\dctbuttonbar.h
 	<iomanip>
 	"UiElements/Bar.h"
 	"UiElements/Button.h"
 	"UiElements/Slider.h"
+	"UiElements/CheckBox.h"
 	"../Drawer/Drawer.h"
 	"../DCT/DCTController.h"
 	"Clickable/ClickableRect.h"
@@ -186,7 +187,7 @@
 1681946837 source:c:\users\flavi\desktop\convas 2\flaviobt2\src\ui\clickable\clickablerect.cpp
 	"ClickableRect.h"
 
-1683415270 source:c:\users\flavi\desktop\convas 2\flaviobt2\src\ui\dctbuttonbar.cpp
+1683418960 source:c:\users\flavi\desktop\convas 2\flaviobt2\src\ui\dctbuttonbar.cpp
 	"DCTButtonBar.h"
 
 1683408750 source:c:\users\flavi\desktop\convas 2\flaviobt2\src\ui\panel.cpp
@@ -198,7 +199,7 @@
 1681946936 source:c:\users\flavi\desktop\convas 2\flaviobt2\src\ui\uielements\button.cpp
 	"Button.h"
 
-1681946947 source:c:\users\flavi\desktop\convas 2\flaviobt2\src\ui\uielements\checkbox.cpp
+1683418727 source:c:\users\flavi\desktop\convas 2\flaviobt2\src\ui\uielements\checkbox.cpp
 	"CheckBox.h"
 
 1681946956 source:c:\users\flavi\desktop\convas 2\flaviobt2\src\ui\uielements\checkboxgroup.cpp

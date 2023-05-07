@@ -23,8 +23,14 @@ public:
 
     /*seta a cor para caso a checkbox esteja selecionada*/
     void set_selected_color(Color *color);
+
+    void set_selected_color(float r, float g, float b);
+
+
     /*seta a cor para caso a checkbox não esteja selecionada*/
     void set_unselected_color(Color *color);
+    void set_unselected_color(float r, float g, float b);
+
 };
 
 #endif

@@ -9,6 +9,7 @@ using namespace std;
 #include "UiElements/Bar.h"
 #include "UiElements/Button.h"
 #include "UiElements/Slider.h"
+#include "UiElements/CheckBox.h"
 #include "../Drawer/Drawer.h"
 #include "../DCT/DCTController.h"
 #include "Clickable/ClickableRect.h"
@@ -22,6 +23,7 @@ class DCTButtons : public Bar{
         Button *sinizeButton;
         Slider *quantSlider;
         Slider *nSlider;
+        CheckBox *showPoints;
 
         DCTController *controller;
 
