@@ -7,7 +7,7 @@ int Panel::width = 150;
 Panel::Panel(DCTController *controller)
 {
     this->controller = controller;
-    this->buttons = new DCTButtons(0, 0, width, 100, controller);
+    this->buttons = new DCTButtons(0, 0, width, 200, controller);
     set_up_field();
 }
 

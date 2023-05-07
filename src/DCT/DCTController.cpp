@@ -67,7 +67,6 @@ void DCTController::set_graphs(){
 }
 
 void DCTController::att_graphs(vector<double> inp){
-
     vector<double> Vdct = CosineTransformer::DCT(inp);
     vector<double> Vquant = CosineTransformer::QUANT(Vdct);
     vector<double> Vdequant = CosineTransformer::DEQUANT(Vquant);
@@ -81,6 +80,7 @@ void DCTController::att_graphs(vector<double> inp){
     dequant->set_points(new PointSet(Vdequant));
     idct->set_points(new PointSet(Vidct));
     diff->set_points(new PointSet(Vdiff));
+    
 }
 
 
@@ -88,12 +88,19 @@ void DCTController::DCT_from_rand(int n){
     att_graphs( CosineTransformer::RAND(n) );
 }
 
+void DCTController::DCT_from_sin(int n){
+    att_graphs( CosineTransformer::SIN(n) );
+}
+
 void DCTController::DCT_from_file(){
     vector<char> inp = FileHandler::load(input);
-    if(inp.size() <= 0) return;
+    if(inp.size() <= 0){
+        DCT_from_rand(32);
+    } else{
+        auto input = char_to_double(inp);
+        att_graphs(input);
+    }
 
-    auto input = char_to_double(inp);
-    att_graphs(input);
 }
 
 void DCTController::save_output(){
@@ -103,14 +110,21 @@ void DCTController::save_output(){
     FileHandler::save(double_to_char(*out), output);
 }
 
+void DCTController::load_from_actual(){
+    vector<double> *out = new vector<double>(*(original->points->points));
+
+    FileHandler::save(double_to_char(*out), input);
+}
+
+
 vector<char> DCTController::double_to_char(vector<double> ds){
-    vector<char> cs(4);
+    vector<char> cs(ds.size() + 4);
     int size = ds.size();
     memcpy(&cs[0], &size, 4);
 
     for(int i = 0; i < size; i++){
         char c = (char) ds.at(i);
-        cs.push_back(c);
+        cs.at(i+4) = c;
     }
 
     return cs;

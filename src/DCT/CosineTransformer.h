@@ -1,6 +1,9 @@
 #ifndef _COSINE_TRANSFORMER_
 #define _COSINE_TRANSFORMER_
 
+/*classe responsável pela geração de vetores
+Aplica DCT e IDCT, quantizacao e dequantização, também gera valores aleatórios e calcula a diferença*/
+
 #include <vector>
 #include <cmath>
 #include <algorithm>
@@ -34,7 +37,12 @@ class CosineTransformer {
         //retorna um novo vetor com os valores aleatórios
         static vector<double> RAND(int n);
 
+        //retorna um novo vetor com valores associados ao seno
+        static vector<double> SIN(int n);
+
+        //seta o valor de quantizacao
         static void set_quantization_factor(double quantizationFactor);
+        //retorna o valor de quantizacao
         static double get_quantization_factor();
 
 };

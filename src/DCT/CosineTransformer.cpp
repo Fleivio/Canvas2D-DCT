@@ -73,15 +73,28 @@ vector<double> CosineTransformer::DIFF(const vector<double> v1, const vector<dou
 
 vector<double> CosineTransformer::RAND(int n){
     vector<double> result;
-    
+
     for(int i = 0; i < n; i++){
         double n = rand() % 256 - 128;
         result.push_back(n);
     }
 
+    return result;
+}
+
+vector<double> CosineTransformer::SIN(int n){
+    vector<double> result;
+
+    double limit = 2 * PI_;
+    double step = limit/n;
+
+    for(double i = 0; i < limit; i += step){
+        result.push_back(sin(i) * 100);
+    }
 
     return result;
 }
+
 
 void CosineTransformer::set_quantization_factor(double q){
     quantizationFactor = q;

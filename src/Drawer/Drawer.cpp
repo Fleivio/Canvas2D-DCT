@@ -84,4 +84,5 @@ void Drawer::draw(Slider *slider)
 {
     draw(slider->fullSlider);
     draw(slider->actual);
+    draw(slider->label, slider->fullSlider);
 }

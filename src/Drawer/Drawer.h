@@ -1,5 +1,5 @@
 /*Implamenta a classe que desenha coisas na tela
-tanto figuras, quanto botões da interface*/
+ botões da interface*/
 
 #ifndef _DRAWER_
 #define _DRAWER_

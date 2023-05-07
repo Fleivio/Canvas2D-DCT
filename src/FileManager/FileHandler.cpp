@@ -16,7 +16,6 @@ vector<char> FileHandler::load(const string &fileName)
 
     if (file.is_open())
     {
-
         file.seekg(0, ios::end);
         size_t fileSize = file.tellg();
         file.seekg(0, ios::beg);
@@ -29,5 +28,6 @@ vector<char> FileHandler::load(const string &fileName)
         return fileContent;
     }
     
-    return vector<char>();
+    vector<char> a = {};
+    return a;
 }
