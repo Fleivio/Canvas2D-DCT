@@ -1,7 +1,7 @@
 #include "DCTController.h"
 
-string DCTController::input = "FlavioBT2/input.dct";
-string DCTController::output = "FlavioBT2/output.dct";
+string DCTController::input = "Trab2Flavio/input.dct";
+string DCTController::output = "Trab2Flavio/output.dct";
 
 float DCTController::xSpace = 150;
 float DCTController::ySpace = 0;

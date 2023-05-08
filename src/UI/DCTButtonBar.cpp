@@ -47,7 +47,6 @@ void DCTButtons::on_hold(float x, float y){
     }else if(nSlider->field->is_point_inside(x,y)) {
         nSlider->on_click(x,y);
         ((Button*)nSlider)->on_click();
-        cout << nSlider->calc_value();
     }
 }
 

@@ -213,3 +213,214 @@
 1683389530 source:c:\users\flavi\desktop\convas 2\flaviobt2\src\ui\uielements\slider.cpp
 	"Slider.h"
 
+1681946731 source:c:\users\flavi\desktop\convas 2\trab2flavio\src\basic\coloredshape.cpp
+	"ColoredShape.h"
+
+1681946740 c:\users\flavi\desktop\convas 2\trab2flavio\src\basic\coloredshape.h
+	"Color.h"
+
+1681946726 c:\users\flavi\desktop\convas 2\trab2flavio\src\basic\color.h
+	"../gl_canvas2d.h"
+
+1683307351 c:\users\flavi\desktop\convas 2\trab2flavio\src\gl_canvas2d.h
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	<GL/glut.h>
+	<GL/freeglut_ext.h>
+	"Basic/Vector2.h"
+
+1426372440 c:\users\flavi\desktop\convas 2\trab2flavio\include\gl\glut.h
+	"freeglut_std.h"
+
+1437579942 c:\users\flavi\desktop\convas 2\trab2flavio\include\gl\freeglut_std.h
+	<windows.h>
+	<EGL/egl.h>
+	<GLES/gl.h>
+	<GLES2/gl2.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1426372440 c:\users\flavi\desktop\convas 2\trab2flavio\include\gl\freeglut_ext.h
+	<stdarg.h>
+
+1681946755 c:\users\flavi\desktop\convas 2\trab2flavio\src\basic\vector2.h
+	<math.h>
+
+1681946747 source:c:\users\flavi\desktop\convas 2\trab2flavio\src\basic\vector2.cpp
+	"Vector2.h"
+
+1683417023 source:c:\users\flavi\desktop\convas 2\trab2flavio\src\dct\cosinetransformer.cpp
+	"CosineTransformer.h"
+
+1683410767 c:\users\flavi\desktop\convas 2\trab2flavio\src\dct\cosinetransformer.h
+	<vector>
+	<cmath>
+	<algorithm>
+	<random>
+	<iostream>
+
+1683409011 source:c:\users\flavi\desktop\convas 2\trab2flavio\src\drawer\drawer.cpp
+	"Drawer.h"
+
+1683410027 c:\users\flavi\desktop\convas 2\trab2flavio\src\drawer\drawer.h
+	"../gl_canvas2d.h"
+	"../UI/Clickable/ClickableCircle.h"
+	"../UI/Clickable/ClickableRect.h"
+	"../UI/UiElements/Button.h"
+	"../UI/UiElements/CheckBox.h"
+	"../UI/UiElements/Slider.h"
+
+1681946831 c:\users\flavi\desktop\convas 2\trab2flavio\src\ui\clickable\clickablecircle.h
+	"ClickableField.h"
+	"../../Basic/Vector2.h"
+
+1681946833 c:\users\flavi\desktop\convas 2\trab2flavio\src\ui\clickable\clickablefield.h
+	"../../Basic/ColoredShape.h"
+	<functional>
+
+1681946842 c:\users\flavi\desktop\convas 2\trab2flavio\src\ui\clickable\clickablerect.h
+	"./ClickableField.h"
+	"../../Basic/Vector2.h"
+
+1681946943 c:\users\flavi\desktop\convas 2\trab2flavio\src\ui\uielements\button.h
+	<functional>
+	<list>
+	<string>
+	"../Clickable/ClickableCircle.h"
+	"../Clickable/ClickableRect.h"
+
+1683418700 c:\users\flavi\desktop\convas 2\trab2flavio\src\ui\uielements\checkbox.h
+	"Button.h"
+
+1683389564 c:\users\flavi\desktop\convas 2\trab2flavio\src\ui\uielements\slider.h
+	"../Clickable/ClickableCircle.h"
+	"../Clickable/ClickableRect.h"
+	"Button.h"
+
+1683415846 source:c:\users\flavi\desktop\convas 2\trab2flavio\src\filemanager\filehandler.cpp
+	"FileHandler.h"
+
+1683308317 c:\users\flavi\desktop\convas 2\trab2flavio\src\filemanager\filehandler.h
+	<vector>
+	<string>
+	<fstream>
+
+1683323290 source:c:\users\flavi\desktop\convas 2\trab2flavio\src\gl_canvas2d.cpp
+	"gl_canvas2d.h"
+	<GL/glut.h>
+
+1683334246 source:c:\users\flavi\desktop\convas 2\trab2flavio\src\graph\graph.cpp
+	"Graph.h"
+
+1683410856 c:\users\flavi\desktop\convas 2\trab2flavio\src\graph\graph.h
+	"../Basic/ColoredShape.h"
+	"PointSet.h"
+	"../Basic/Vector2.h"
+	<string>
+
+1683334263 c:\users\flavi\desktop\convas 2\trab2flavio\src\graph\pointset.h
+	"../Basic/Vector2.h"
+	<vector>
+	<algorithm>
+	<iostream>
+
+1683418850 source:c:\users\flavi\desktop\convas 2\trab2flavio\src\graph\graphdrawer.cpp
+	"GraphDrawer.h"
+
+1683418856 c:\users\flavi\desktop\convas 2\trab2flavio\src\graph\graphdrawer.h
+	"Graph.h"
+	"PointSet.h"
+	"../gl_canvas2d.h"
+	<vector>
+	<string>
+	<sstream>
+
+1683334283 source:c:\users\flavi\desktop\convas 2\trab2flavio\src\graph\pointset.cpp
+	"PointSet.h"
+
+1683379354 source:c:\users\flavi\desktop\convas 2\trab2flavio\src\input.cpp
+	"Input.h"
+
+1683379123 c:\users\flavi\desktop\convas 2\trab2flavio\src\input.h
+	"Basic/Vector2.h"
+	"UI/Panel.h"
+	"FileManager/FileHandler.h"
+	"DCT/DCTController.h"
+	<vector>
+
+1683410923 c:\users\flavi\desktop\convas 2\trab2flavio\src\ui\panel.h
+	"Clickable/ClickableRect.h"
+	"../DCT/DCTController.h"
+	"DCTButtonBar.h"
+
+1683411051 c:\users\flavi\desktop\convas 2\trab2flavio\src\dct\dctcontroller.h
+	<string>
+	<vector>
+	<iostream>
+	"../FileManager/FileHandler.h"
+	"CosineTransformer.h"
+	"../Graph/Graph.h"
+	"../Graph/GraphDrawer.h"
+
+1683418459 c:\users\flavi\desktop\convas 2\trab2flavio\src\ui\dctbuttonbar.h
+	<iomanip>
+	"UiElements/Bar.h"
+	"UiElements/Button.h"
+	"UiElements/Slider.h"
+	"UiElements/CheckBox.h"
+	"../Drawer/Drawer.h"
+	"../DCT/DCTController.h"
+	"Clickable/ClickableRect.h"
+
+1681946931 c:\users\flavi\desktop\convas 2\trab2flavio\src\ui\uielements\bar.h
+	"Button.h"
+
+1683401812 source:c:\users\flavi\desktop\convas 2\trab2flavio\src\main.cpp
+	<GL/glut.h>
+	<GL/freeglut_ext.h>
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+	<iostream>
+	<ctime>
+	"DCT/DCTController.h"
+	"UI/Panel.h"
+	"Input.h"
+
+1681946827 source:c:\users\flavi\desktop\convas 2\trab2flavio\src\ui\clickable\clickablecircle.cpp
+	"ClickableCircle.h"
+
+1681946837 source:c:\users\flavi\desktop\convas 2\trab2flavio\src\ui\clickable\clickablerect.cpp
+	"ClickableRect.h"
+
+1683418960 source:c:\users\flavi\desktop\convas 2\trab2flavio\src\ui\dctbuttonbar.cpp
+	"DCTButtonBar.h"
+
+1683408750 source:c:\users\flavi\desktop\convas 2\trab2flavio\src\ui\panel.cpp
+	"Panel.h"
+
+1683389017 source:c:\users\flavi\desktop\convas 2\trab2flavio\src\ui\uielements\bar.cpp
+	"Bar.h"
+
+1681946936 source:c:\users\flavi\desktop\convas 2\trab2flavio\src\ui\uielements\button.cpp
+	"Button.h"
+
+1683418727 source:c:\users\flavi\desktop\convas 2\trab2flavio\src\ui\uielements\checkbox.cpp
+	"CheckBox.h"
+
+1681946956 source:c:\users\flavi\desktop\convas 2\trab2flavio\src\ui\uielements\checkboxgroup.cpp
+	"CheckBoxGroup.h"
+
+1681946960 c:\users\flavi\desktop\convas 2\trab2flavio\src\ui\uielements\checkboxgroup.h
+	"CheckBox.h"
+	"../../Drawer/Drawer.h"
+	<list>
+
+1683389530 source:c:\users\flavi\desktop\convas 2\trab2flavio\src\ui\uielements\slider.cpp
+	"Slider.h"
+
